@@ -1,0 +1,40 @@
+<!ELEMENT events (organization, logo, website?, socialMedia*, event*)>
+<!ELEMENT organization (#PCDATA)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT website (#PCDATA)>
+<!ELEMENT socialMedia (#PCDATA)>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<!ELEMENT event (name, date, hosts, participants+, resources, feedback*)>
+    <!ATTLIST event eventID CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT date (#PCDATA)>
+    <!ATTLIST date startDate CDATA #REQUIRED>
+    <!ATTLIST date endDate CDATA #REQUIRED>
+
+<!ELEMENT hosts (#PCDATA)>
+    <!ATTLIST hosts hostID CDATA #REQUIRED>
+    <!ATTLIST hosts hostFirstName CDATA #REQUIRED>
+    <!ATTLIST hosts hostLastName CDATA #REQUIRED>
+    <!ATTLIST hosts phoneNumber CDATA #REQUIRED>
+    <!ATTLIST hosts emailAddress CDATA #REQUIRED>
+
+<!ELEMENT participants (#PCDATA)>
+    <!ATTLIST participants participantFirstName CDATA #REQUIRED>
+    <!ATTLIST participants participantLastName CDATA #REQUIRED>
+    <!ATTLIST participants role (attendee | speaker | sponsor) #REQUIRED>
+    <!ATTLIST participants phoneNumber CDATA #REQUIRED>
+    <!ATTLIST participants emailAddress CDATA #REQUIRED>
+
+<!ELEMENT resources (#PCDATA)>
+    <!ATTLIST resources location CDATA #REQUIRED>
+    <!ATTLIST resources capacity CDATA #REQUIRED>
+    <!ATTLIST resources equipment CDATA #REQUIRED>
+    <!ATTLIST resources cateringServices CDATA #REQUIRED>
+
+<!ELEMENT feedback (#PCDATA)>
+    <!ATTLIST feedback feedbackID CDATA #REQUIRED>
+    <!ATTLIST feedback comment CDATA #REQUIRED>
