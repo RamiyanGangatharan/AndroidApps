@@ -1,0 +1,11 @@
+
+    // Driver program
+    public static void main(String[] args) {
+        int decimal = 17;
+        String binary = decimalToBinary(decimal);
+        System.out.println("Decimal: " + decimal);
+        System.out.println("Binary: " + binary);
+
+        int decimalFromBinary = binaryToDecimal(binary);
+        System.out.println("Binary to Decimal: " + decimalFromBinary);
+    }

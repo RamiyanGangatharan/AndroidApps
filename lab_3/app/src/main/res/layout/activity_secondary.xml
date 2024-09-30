@@ -1,10 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/light_gray"
     tools:context=".SecondaryActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Computer Number Converter"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/decimalInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="Enter Decimal Number"
+                android:inputType="number"
+                android:backgroundTint="@color/primary"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:minHeight="48dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/binaryInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="Enter Binary Number"
+                android:inputType="text"
+                android:backgroundTint="@color/primary"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:minHeight="48dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/calculateButton_DecimalToBinary"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Convert Decimal to Binary"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:minHeight="56dp"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/calculateButton_BinaryToDecimal"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Convert Binary to Decimal"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:minHeight="56dp"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_exit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:backgroundTint="@color/danger"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
