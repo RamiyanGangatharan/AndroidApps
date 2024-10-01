@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:hint="Enter String"
-                android:inputType="number"
+                android:inputType="text"
                 android:backgroundTint="@color/primary"
                 android:padding="16dp"
                 android:textColor="@color/black"
@@ -59,14 +59,20 @@
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:hint="Enter Binary Number"
-                android:inputType="text"
+                android:inputType="textMultiLine|textNoSuggestions"
                 android:backgroundTint="@color/primary"
                 android:padding="16dp"
                 android:textColor="@color/black"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
                 android:layout_marginTop="12dp"
-                android:minHeight="48dp" />
+                android:minHeight="120dp"
+                android:lines="4"
+                android:scrollHorizontally="false"
+                android:gravity="top|start"
+                android:maxLength="256"
+                android:singleLine="false"
+                tools:ignore="HardcodedText" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <LinearLayout

@@ -8,6 +8,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/*
+ * TODO:
+ *  - implement the credits page to feature your sources and school information
+ *  - implement an accelerometer to detect whether the user is shaking their phone
+ */
+
 /**
  * MainMenu class represents the main screen of the application. It handles UI initialization,
  * button click listeners, and window insets adjustments for edge-to-edge display.

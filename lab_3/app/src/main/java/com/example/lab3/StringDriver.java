@@ -11,13 +11,12 @@ public class StringDriver
         for (char character : input.toCharArray())
         {
             String binaryChar = Integer.toBinaryString(character);
-            String reversedBinary = reverseSequence(binaryChar);
-            binaryResult.append(reversedBinary).append(" ");
+            String paddedBinary = String.format("%8s", binaryChar).replace(' ', '0');
+            binaryResult.append(paddedBinary).append(" ");
         }
         return binaryResult.toString().trim();
     }
 
-    // Converts binary to string
     @NonNull
     public static String binaryToString(@NonNull String binaryInput)
     {
@@ -26,28 +25,9 @@ public class StringDriver
 
         for (String binary : binaryArray)
         {
-            String reversedBinary = reverseSequence(binary);
-            int charCode = Integer.parseInt(reversedBinary, 2);
+            int charCode = Integer.parseInt(binary, 2);
             stringResult.append((char) charCode);
         }
         return stringResult.toString();
-    }
-
-    // Reverse the binary sequence for proper conversion
-    @NonNull
-    public static String reverseSequence(@NonNull String input)
-    {
-        char[] characters = input.toCharArray();
-        int leftIndex = 0, rightIndex = characters.length - 1;
-
-        while (leftIndex < rightIndex)
-        { // Swap characters
-            char tempChar = characters[leftIndex];
-            characters[leftIndex] = characters[rightIndex];
-            characters[rightIndex] = tempChar;
-            leftIndex++;
-            rightIndex--;
-        }
-        return String.valueOf(characters);
     }
 }
