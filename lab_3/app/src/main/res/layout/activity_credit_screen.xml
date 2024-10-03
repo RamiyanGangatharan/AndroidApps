@@ -11,16 +11,16 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:text="Credits"
         android:textAlignment="center"
         android:textSize="60sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
         android:layout_height="match_parent"
         android:padding="16dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="58dp">
+        tools:layout_editor_absoluteY="-59dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -216,6 +216,19 @@
             </TableLayout>
         </ScrollView>
 
+        <Button
+            android:id="@+id/button_exit2"
+            android:layout_width="74dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/danger"
+            android:padding="12dp"
+            android:text="Exit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="-1dp" />
+
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
@@ -226,6 +239,7 @@
             android:textSize="60sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

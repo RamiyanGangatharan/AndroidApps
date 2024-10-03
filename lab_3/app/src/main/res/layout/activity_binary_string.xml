@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp"
     android:background="@color/light_gray"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".BinaryStringScreen">
-
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Computer String Converter"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:layout_marginBottom="16dp"
         android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <androidx.cardview.widget.CardView
@@ -44,84 +42,85 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
+                android:backgroundTint="@color/primary"
                 android:hint="Enter String"
                 android:inputType="text"
-                android:backgroundTint="@color/primary"
+                android:minHeight="48dp"
                 android:padding="16dp"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:minHeight="48dp"
                 tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/binaryInput2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:autofillHints=""
+                android:backgroundTint="@color/primary"
+                android:gravity="top|start"
                 android:hint="Enter Binary Number"
                 android:inputType="textMultiLine|textNoSuggestions"
-                android:backgroundTint="@color/primary"
+                android:lines="4"
+                android:maxLength="256"
+                android:minHeight="120dp"
                 android:padding="16dp"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="12dp"
-                android:minHeight="120dp"
-                android:lines="4"
-                android:scrollHorizontally="false"
-                android:gravity="top|start"
-                android:maxLength="256"
-                android:singleLine="false"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <LinearLayout
-        style="?android:attr/buttonBarStyle"
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
         android:layout_marginTop="16dp">
 
-        <Button
-            android:id="@+id/calculateButton_StringToBinary"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
+        <RadioButton
+            android:id="@+id/radioButton_StringToBinary"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Convert String to Binary"
-            android:textSize="14sp"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/primary"
-            android:minHeight="56dp"
             android:padding="12dp"
-            android:layout_marginEnd="8dp"
+            android:text="Convert String to Binary"
+            android:textColor="@color/black"
             tools:ignore="HardcodedText" />
 
-        <Button
-            android:id="@+id/calculateButton_BinaryToString"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
+        <RadioButton
+            android:id="@+id/radioButton_BinaryToString"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Convert Binary to String"
-            android:textSize="14sp"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/primary"
-            android:minHeight="56dp"
             android:padding="12dp"
-            android:layout_marginStart="8dp"
+            android:text="Convert Binary to String"
+            android:textColor="@color/black"
             tools:ignore="HardcodedText" />
-    </LinearLayout>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/primary"
+        android:padding="12dp"
+        android:text="Accept"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
     <Button
         android:id="@+id/button_exit3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/danger"
+        android:padding="12dp"
         android:text="Exit"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:backgroundTint="@color/danger"
-        android:layout_marginTop="24dp"
-        android:padding="12dp"
         tools:ignore="HardcodedText" />
+
 </LinearLayout>

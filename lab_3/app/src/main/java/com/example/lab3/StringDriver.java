@@ -1,15 +1,13 @@
 package com.example.lab3;
+
 import androidx.annotation.NonNull;
 
-public class StringDriver
-{
+public class StringDriver {
     @NonNull
-    public static String stringToBinary(@NonNull String input)
-    {
+    public static String stringToBinary(@NonNull String input) {
         StringBuilder binaryResult = new StringBuilder();
 
-        for (char character : input.toCharArray())
-        {
+        for (char character : input.toCharArray()) {
             String binaryChar = Integer.toBinaryString(character);
             String paddedBinary = String.format("%8s", binaryChar).replace(' ', '0');
             binaryResult.append(paddedBinary).append(" ");
@@ -18,13 +16,11 @@ public class StringDriver
     }
 
     @NonNull
-    public static String binaryToString(@NonNull String binaryInput)
-    {
+    public static String binaryToString(@NonNull String binaryInput) {
         StringBuilder stringResult = new StringBuilder();
         String[] binaryArray = binaryInput.split(" ");
 
-        for (String binary : binaryArray)
-        {
+        for (String binary : binaryArray) {
             int charCode = Integer.parseInt(binary, 2);
             stringResult.append((char) charCode);
         }
